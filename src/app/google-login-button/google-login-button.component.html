@@ -1,0 +1,17 @@
+
+<div class="card">
+
+  <div class="w-100 my-3 p-3">
+    <label class="form-label"> Enter Google Client Id</label>
+    <input class="form-control w-100" type="text" placeholder="Enter Client Id" [(ngModel)]="clientID" >
+
+    <button [disabled]="clientID==''? true : false" class="btn btn-primary my-3" (click)="addGoogleLogin()"> Add Google Login</button>
+  </div>
+
+<div  *ngIf="!hideGoogleButton" id="google-button"></div>
+
+<div class="w-100 p-2">
+<div *ngIf="errorMessage" class="alert w-100 alert-warning"> {{errorMessage}}</div>
+</div>
+
+</div>
